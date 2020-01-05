@@ -129,6 +129,9 @@ def inflate_weight(state_dict_2d, state_dict_3d):
     Returns:
         state_dict_inflated (OrderedDict): a dict of inflated parameters.
     """
+    print(state_dict_2d.keys())
+    print("***************************")
+    print(state_dict_3d.keys())
     state_dict_inflated = OrderedDict()
     for k, v2d in state_dict_2d.items():
         assert k in state_dict_3d.keys()
