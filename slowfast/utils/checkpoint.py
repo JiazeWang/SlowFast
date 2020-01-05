@@ -220,8 +220,7 @@ def load_checkpoint(
                 else model.state_dict()
             )
             inflated_model_dict = inflate_weight(
-                checkpoint, model_state_dict_3d
-                #checkpoint["model_state"], model_state_dict_3d
+                checkpoint["model_state"], model_state_dict_3d
             )
             ms.load_state_dict(inflated_model_dict, strict=False)
         else:
